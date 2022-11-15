@@ -501,6 +501,7 @@ address {
 }
 
 .mod-input {
+  outline: none;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -509,6 +510,11 @@ address {
   border-radius: 4px;
   background-color: var(--background-dark-color);
   color: var(--white-color);
+}
+
+.mod-input:hover,
+.mod-input:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .mod-input::placeholder {
@@ -745,10 +751,11 @@ address {
 .modal-input {
   display: block;
   width: 100%;
-  padding: 12px 30px;
+  padding: 12px 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   cursor: pointer;
+  outline: none;
 }
 
 .modal-input:focus,
@@ -810,6 +817,7 @@ address {
   border-radius: 4px;
   height: 120px;
   resize: none;
+  outline: none;
 }
 
 .modal-comment::placeholder {
@@ -838,18 +846,19 @@ address {
 
 .fs {
   display: inline-block;
-  width: 15px;
+  width: 16px;
   height: 15px;
   margin-right: 8px;
   background-color: transparent;
   border: 2px solid #212121;
+  border-radius: 3px;
 }
 
 .checkbox:checked+.fs {
   background-color: var(--accent-color);
   background-image: url(../images/vector3.svg);
-  background-size: contain;
-  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-origin: content-box;
   border-color: var(--accent-color);
   margin-right: 8px;
   border-radius: 4px;
